@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Add this import
+import { Link } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Hero from "../images/hero.png";
 
@@ -29,6 +29,7 @@ const slides = [
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // Add this state
 
   // Next slide
   const nextSlide = () => {
@@ -50,6 +51,27 @@ const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Close mobile menu when window resizes to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Navigation links
+  const navLinks = [
+    { name: "Home", to: "/" },
+    { name: "Who We Are", to: "/who-we-are" },
+    { name: "What We Do", to: "/what-we-do" },
+    { name: "Partner With Us", to: "/partner-with-us" },
+    { name: "Our Projects", to: "/projects" },
+    { name: "Join Us", to: "/join-us" },
+  ];
 
   return (
     <section className="relative h-screen min-h-[650px] w-full overflow-hidden">
@@ -79,75 +101,75 @@ const HeroSection = () => {
 
       {/* ================= NAVBAR ================= */}
       <header className="relative z-20">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          
-          {/* Logo */}
-          <Link to="/" className="flex flex-col leading-none">
-            <img src={Logo} alt="Sowing Seeds Alliance Logo" className="h-10 w-auto" />
-          </Link>
-
-          {/* Desktop navigation */}
-          <nav className="hidden items-center gap-8 md:flex">
-            <Link
-              to="/"
-              className="text-sm text-white transition hover:text-red-400"
-            >
-              Home
+        <div className="mx-auto flex max-w-7xl flex-col px-6 py-5 lg:px-10">
+          {/* Top row: Logo + Menu Button */}
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link to="/" className="flex flex-col leading-none">
+              <img src={Logo} alt="Sowing Seeds Alliance Logo" className="h-10 w-auto" />
             </Link>
 
-            <Link
-              to="/who-we-are"
-              className="text-sm text-white transition hover:text-red-400"
-            >
-              Who We Are
-            </Link>
+            {/* Desktop navigation */}
+            <nav className="hidden items-center gap-8 md:flex">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.to}
+                  className="text-sm text-white transition hover:text-red-400"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
 
-            <Link
-              to="/what-we-do"
-              className="text-sm text-white transition hover:text-red-400"
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md md:hidden"
+              aria-label="Toggle menu"
             >
-              What We Do
-            </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                {mobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </>
+                )}
+              </svg>
+            </button>
+          </div>
 
-            <Link
-              to="/partner-with-us"
-              className="text-sm text-white transition hover:text-red-400"
-            >
-              Partner With Us
-            </Link>
-
-            <Link
-              to="/projects"
-              className="text-sm text-white transition hover:text-red-400"
-            >
-              Our Projects
-            </Link>
-
-            <Link
-              to="/join-us"
-              className="text-sm text-white transition hover:text-red-400"
-            >
-              Join Us
-            </Link>
-          </nav>
-
-          {/* Mobile menu button */}
-          <button className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+          {/* Mobile menu - now inside the header and below the top row */}
+          {mobileMenuOpen && (
+            <nav className="mt-4 flex flex-col gap-4 border-t border-white/20 pt-4 md:hidden">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.to}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm text-white transition hover:text-red-400"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          )}
         </div>
       </header>
 
