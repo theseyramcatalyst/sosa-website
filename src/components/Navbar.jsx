@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: "Home", to: "/" },
     { name: "Who We Are", to: "/who-we-are" },
     { name: "What We Do", to: "/what-we-do" },
-    { name: "Partner With Us", to: "/partner" },
+    { name: "Partner With Us", to: "/partner-with-us" },
     { name: "Our Projects", to: "/projects" },
     { name: "Join Us", to: "/join-us" },
   ];

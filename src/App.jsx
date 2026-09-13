@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import WhoWeAre from "./pages/WhoWeAre";
 import Projects from "./pages/Projects";
+import PartnerWithUs from "./pages/PartnerWithUs";
+import WhatWeDo from "./pages/WhatWeDo";
 import JoinUs from "./pages/JoinUs";
+
 
 // Import other pages when you create them
 // import About from './pages/About';
@@ -27,6 +30,15 @@ function App() {
           path="/join-us"
           element={<JoinUs />}
         />
+        <Route
+            path="/what-we-do"
+            element={<WhatWeDo />}
+          />
+
+          <Route
+            path="/partner-with-us"
+            element={<PartnerWithUs />}
+          />
           {/* Add more routes as needed */}
           {/* <Route path="/about" element={<About />} /> */}
           {/* <Route path="/projects" element={<Projects />} /> */}
