@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Hero from "../images/hero.png";
+import WhatWeDoHero from "../images/what-we-do-hero.jpg";
+import WhoWeAreHero from "../images/who-we-are-hero.jpg";
 
 const slides = [
   {
@@ -12,14 +14,14 @@ const slides = [
       "It's not about how much you know, it's about how best you can impact others.",
   },
   {
-    image: Hero,
+    image: WhoWeAreHero,
     subtitle: "Sowing Seeds",
     title: "Empowering Communities",
     description:
       "Creating opportunities, inspiring growth, and building stronger communities.",
   },
   {
-    image: Hero,
+    image: WhatWeDoHero,
     subtitle: "Sowing Seeds",
     title: "Growing Together",
     description:
