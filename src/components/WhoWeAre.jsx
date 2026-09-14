@@ -1,5 +1,6 @@
 import React from "react";
 import whoWeAreImage from "../images/who-we-are.png";
+import { Link } from "react-router-dom";
 
 const WhoWeAre = () => {
   return (
@@ -52,13 +53,14 @@ const WhoWeAre = () => {
             </div>
 
             {/* Button */}
+            
             <div className="mt-auto flex justify-end pt-6">
-              <a
-                href="#about-more"
+              <Link
+                to="/who-we-are"
                 className="inline-flex h-[3rem] items-center bg-[#d40000] px-[2rem] text-sm font-medium text-white transition hover:bg-[#b80000]"
               >
                 Get to know us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

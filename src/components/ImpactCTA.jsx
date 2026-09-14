@@ -1,5 +1,6 @@
 import React from "react";
 import ImpactCTAImage from "../images/impact-cta.jpg";
+import { Link } from "react-router-dom";
 const ImpactCTA = () => {
   return (
     <section className="relative min-h-[220px] overflow-hidden">
@@ -24,12 +25,12 @@ const ImpactCTA = () => {
           a more just and sustainable world.
         </p>
 
-        <a
-          href="/join-us"
+        <Link
+          to="/join-us"
           className="mt-5 bg-white px-7 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100"
         >
           Join Us
-        </a>
+        </Link>
       </div>
     </section>
   );

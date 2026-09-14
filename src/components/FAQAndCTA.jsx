@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ChangeBackground from '../images/change-background.jpg'; // Import the image
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -137,12 +138,14 @@ export default function FAQAndCTA() {
             a more just and sustainable world.
           </p>
 
-          <button
-            type="button"
-            className="mt-4 sm:mt-5 md:mt-6 rounded-md bg-white px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-xs sm:text-[11px] md:text-xs font-medium text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-lg active:scale-95"
-          >
-            Join Us
-          </button>
+          <div className="mt-5 sm:mt-6 md:mt-7">
+            <Link
+              to="/join-us"
+              className="sm:mt-5 md:mt-6 rounded-md bg-white px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-xs sm:text-[11px] md:text-xs font-medium text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Join Us
+            </Link>
+          </div>
         </div>
 
         {/* Decorative element - optional */}

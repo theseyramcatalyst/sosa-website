@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import BackgroundImage from '../images/impact-background.jpg';
+import { Link } from "react-router-dom";
 
 const solutions = [
   {
@@ -76,12 +77,12 @@ export default function ImpactfulSolutions() {
             Take the first step towards creating a positive impact on society.
           </p>
 
-          <button
-            type="button"
+          <Link
+            to="/join-us"
             className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-gray-900 shadow-sm transition-all duration-200 hover:bg-gray-100 hover:shadow-md"
           >
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
 

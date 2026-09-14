@@ -1,5 +1,6 @@
 import React from "react";
 import WhatWeDoImage from '../images/what-we-do.png';
+import { Link } from "react-router-dom";
 
 const features = [
   "Advocate for the rights and well-being of youth, children, and marginalized groups.",
@@ -47,12 +48,12 @@ export default function WhatWeDo() {
               ))}
             </ul>
 
-            <button
-              type="button"
-              className="mt-4 sm:mt-5 bg-[#d90000] px-5 sm:px-6 md:px-7 py-2 sm:py-2.5 text-xs sm:text-sm font-medium text-white transition-all duration-300 hover:bg-[#b80000] hover:scale-105 active:scale-95"
+            <Link
+              to="/what-we-do"
+              className="mt-4 inline-flex items-center bg-[#d90000] px-5 py-2 text-xs font-medium text-white transition-all duration-300 hover:bg-[#b80000] hover:scale-105 active:scale-95 sm:mt-5 sm:px-6 sm:py-2.5 sm:text-sm md:px-7"
             >
               Know More
-            </button>
+            </Link>
           </div>
         </div>
 

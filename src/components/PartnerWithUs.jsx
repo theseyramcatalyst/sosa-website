@@ -1,5 +1,6 @@
 import React from "react";
 import PartnerWithUsImage from "../images/partner-with-us.png"
+import { Link } from "react-router-dom";
 
 export default function PartnerWithUs() {
   return (
@@ -45,12 +46,12 @@ export default function PartnerWithUs() {
               </div>
 
               <div className="mt-5 flex justify-end">
-                <button
-                  type="button"
-                  className="bg-[#d90000] px-9 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-[#b80000]"
+                <Link
+                  to="/join-us"
+                  className="mt-4 inline-flex items-center bg-[#d90000] px-5 py-2 text-xs font-medium text-white transition-all duration-300 hover:bg-[#b80000] hover:scale-105 active:scale-95 sm:mt-5 sm:px-6 sm:py-2.5 sm:text-sm md:px-7"
                 >
-                  Contact us
-                </button>
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>
