@@ -3,7 +3,7 @@ import JoinUsHero from "../images/join-us-hero.jpg"
 
 const JoinHero = () => {
   return (
-    <section className="relative min-h-[315px] overflow-hidden">
+    <section className="relative min-h-[370px] overflow-hidden">
       {/* Background */}
       <img
         src={JoinUsHero}
@@ -14,7 +14,7 @@ const JoinHero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
-      <div className="relative z-10 mx-auto flex min-h-[315px] max-w-[1080px] items-center px-6 sm:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[370px] max-w-[1080px] items-center px-6 sm:px-10">
         <div className="max-w-[760px] text-white">
 
           {/* Breadcrumb */}
@@ -34,13 +34,13 @@ const JoinHero = () => {
             Join Us
           </h1>
 
-          <p className="mt-3 text-xs leading-[1.8] sm:text-[11px]">
+          <p className="mt-3 text-xs leading-[1.8] sm:text-sm">
             Do you have a passion for making a difference in the lives of
             young people and marginalized communities? Sowing Seeds Alliance
             is seeking dedicated individuals to join our team of volunteers.
           </p>
 
-          <p className="mt-5 text-xs leading-[1.8] sm:text-[11px]">
+          <p className="mt-5 text-xs leading-[1.8] sm:text-sm">
             Your time and talents can help us create lasting positive change.
             Whether you have a knack for teaching, a heart for advocacy, or a
             passion for technology, there's a role for you at Sowing Seeds

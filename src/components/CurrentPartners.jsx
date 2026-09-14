@@ -73,7 +73,7 @@ const PartnerCard = ({
         </div>
 
         <p className="mt-1 text-[8px] italic text-white/80">
-          Kusiɛse, Nurturing Minds
+          Kutse, Nurturing Minds
         </p>
       </div>
 

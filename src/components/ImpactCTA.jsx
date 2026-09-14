@@ -2,7 +2,7 @@ import React from "react";
 import ImpactCTAImage from "../images/impact-cta.jpg";
 const ImpactCTA = () => {
   return (
-    <section className="relative min-h-[190px] overflow-hidden">
+    <section className="relative min-h-[220px] overflow-hidden">
       <img
         src={ImpactCTAImage}
         alt=""
@@ -11,7 +11,7 @@ const ImpactCTA = () => {
 
       <div className="absolute inset-0 bg-red-500/60" />
 
-      <div className="relative z-10 mx-auto flex min-h-[190px] max-w-[700px] flex-col items-center justify-center px-6 text-center text-white">
+      <div className="relative z-10 mx-auto flex min-h-[220px] max-w-[700px] flex-col items-center justify-center px-6 text-center text-white">
 
         <h2 className="text-2xl font-bold">
           Creating Lasting Impact

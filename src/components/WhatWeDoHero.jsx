@@ -3,7 +3,7 @@ import WhatWeDoHeroImage from "../images/what-we-do-hero.jpg";
 
 const WhatWeDoHero = () => {
   return (
-    <section className="relative min-h-82.5 overflow-hidden">
+    <section className="relative min-h-90 overflow-hidden">
       <img
         src={WhatWeDoHeroImage}
         alt=""
@@ -12,7 +12,7 @@ const WhatWeDoHero = () => {
 
       <div className="absolute inset-0 bg-black/60" />
 
-      <div className="relative z-10 mx-auto flex min-h-82.5 max-w-[1080px] items-center px-6">
+      <div className="relative z-10 mx-auto flex min-h-90  max-w-[1080px] items-center px-6">
         <div className="w-full text-center text-white">
 
           <div className="mb-8 text-left text-sm">
@@ -24,7 +24,7 @@ const WhatWeDoHero = () => {
             What We Do
           </h1>
 
-          <p className="mx-auto mt-4 max-w-[620px] text-sm leading-[1.8]">
+          <p className="mx-auto mt-4 max-w-[620px] lg:text-sm text-xs leading-[1.8]">
             We nurture entrepreneurship, provide quality education, and
             conduct impactful research, we create opportunities for
             individuals to thrive and drive positive change in their

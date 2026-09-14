@@ -31,7 +31,7 @@ const PageHero = ({ title, image, description }) => {
           {title}
         </h1>
 
-        <p className="mt-5 max-w-[650px] text-[9px] leading-[1.8] text-white sm:text-sm">
+        <p className="mt-5 max-w-[650px] text-sm leading-[1.8] text-white sm:text-sm">
           {description}
         </p>
       </div>
