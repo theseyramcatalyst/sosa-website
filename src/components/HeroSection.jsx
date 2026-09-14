@@ -197,14 +197,14 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                to="/campaign"
+                to="/who-we-are"
                 className="rounded-md bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
               >
                 About the campaign
               </Link>
 
               <Link
-                to="/partner"
+                to="/partner-with-us"
                 className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-red-500 transition hover:bg-gray-100"
               >
                 Become a Partner
